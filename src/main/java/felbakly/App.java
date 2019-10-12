@@ -7,10 +7,8 @@ import java.net.ServerSocket;
  * Hello world!
  *
  */
-public class App 
-{
-    public static void main( String[] args )
-    {
+public class App {
+    public static void main(String[] args) {
         final var port = 8888;
         try {
             System.out.println("just entered try block");
@@ -37,11 +35,12 @@ public class App
             printWriter.println("Content-Length: " + String.valueOf(contentLength));
             printWriter.println("");
             printWriter.println(content);
-            // .flush() waits till  everything written prior to it's call
+            // .flush() waits till everything written prior to it's call
             printWriter.flush();
             System.out.println("Sent");
             serverSocket.close();
         } catch (Exception e) {
             e.printStackTrace();
-        }    }
+        }
+    }
 }
